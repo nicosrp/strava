@@ -20,8 +20,8 @@ jobs:
 
     - name: Install dependencies
       run: |
-        gem install bundler
-        bundle install
+        gem install bundler --no-document
+        bundle install --verbose
 
     - name: Build Jekyll site
       run: bundle exec jekyll build -d _site  # Jekyll outputs to _site by default
