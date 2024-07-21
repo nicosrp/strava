@@ -24,7 +24,7 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+        personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         publish_dir: ./build  # Change to your build output directory
         external_repository: nicosrp/strava-public  # Adjust to your public repo
         publish_branch: main  # Branch of your public repository
