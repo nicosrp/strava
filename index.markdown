@@ -24,7 +24,7 @@ In the following, an overview of all of my runs is provided in a list.
 <h2>Development over the Years</h2>
 
 This is a scatterplot showing distance plotted against pace for each year recorded.
-<iframe src="distance_vs_pace.html" width="100%" height="600" style="border:none; margin-bottom: 20px;"></iframe>
+<iframe src="distance_vs_pace.html" width="100%" height="650" style="border:none; margin-bottom: 20px;"></iframe>
 
 In the following graph we can see how often I went running over the years.
 <iframe src="runs_over_years.html" width="100%" height="600" style="border:none; margin-bottom: 20px;"></iframe>
