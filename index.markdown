@@ -7,7 +7,7 @@ layout: home
 
 <h1>My Strava Activities</h1>
 
-<iframe src="statistics.html" width="100%" height="550" style="border:none;"></iframe>
+<iframe src="statistics.html" width="100%" height="300" style="border:none;"></iframe>
 
 <h2>Heatmaps</h2>
 This heatmap shows where I was already running. If zooms into the area of Copenhagen but contains runs from around the world.
