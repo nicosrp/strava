@@ -13,17 +13,20 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Use system Ruby
+    - name: Set up Ruby environment and install Bundler
       run: |
         ruby -v
+        echo "gem: --user-install" > ~/.gemrc
         gem install bundler --no-document --verbose
-
-    - name: Install dependencies
-      run: |
-        bundle install --verbose
+        export PATH=$HOME/.gem/ruby/$(ls $HOME/.gem/ruby/)/bin:$PATH
+        export GEM_HOME=$HOME/.gem/ruby/$(ls $HOME/.gem/ruby/)
+        bundle install --path vendor/bundle --verbose
 
     - name: Build Jekyll site
-      run: bundle exec jekyll build -d _site  # Jekyll outputs to _site by default
+      run: |
+        export PATH=$HOME/.gem/ruby/$(ls $HOME/.gem/ruby/)/bin:$PATH
+        export GEM_HOME=$HOME/.gem/ruby/$(ls $HOME/.gem/ruby/)
+        bundle exec jekyll build -d _site  # Jekyll outputs to _site by default
 
     - name: List files for debugging
       run: |
