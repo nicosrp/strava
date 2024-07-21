@@ -21,7 +21,7 @@
 title: Strava
 description: >- # this means to ignore newlines until "baseurl:"
   This page shows an overview over my running activities.
-baseurl: "strava-public" # the subpath of your site, e.g. /blog
+baseurl: "strava" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
