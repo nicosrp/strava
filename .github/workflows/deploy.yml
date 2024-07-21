@@ -26,6 +26,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./build  # Change to your build output directory
-        destination_dir: ''   # This is the root directory for GitHub Pages
+        external_repository: nicosrp/strava-public  # Adjust to your public repo
         publish_branch: main  # Branch of your public repository
-        publish_repo: nicosrp/strava-public.github.io  # Adjust to your public repo
