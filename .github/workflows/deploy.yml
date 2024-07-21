@@ -1,0 +1,30 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # Adjust if your default branch is different
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Build project
+      run: |
+        # Add your build commands here
+        # For example, if using Jekyll:
+        # bundle install
+        # bundle exec jekyll build -d build
+        # If using plain HTML/CSS/JS, you might not need any build steps
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        publish_dir: ./build  # Change to your build output directory
+        external_repository: nicosrp/strava-public  # Adjust to your public repo
+        publish_branch: main  # Branch of your public repository
