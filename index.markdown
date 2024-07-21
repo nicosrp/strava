@@ -10,15 +10,13 @@ layout: home
 <iframe src="statistics.html" width="100%" height="325" style="border:none; margin-bottom: 20px;"></iframe>
 
 <h2>Heatmaps</h2>
-This heatmap shows where I was already running. If zooms into the area of Copenhagen but contains runs from around the world.
+This heatmap shows where I was already running around the world.
 
-<h3>Copenhagen</h3>
-This is the distribution of runs across all cities in which I did a run.
-
+<h3>Zoomed into Copenhagen</h3>
 <iframe src="map_local.html" width="100%" height="550" style="border:none; margin-bottom: 20px;"></iframe>
 
 <h2>List of All Runs</h2>
-In the following, an overview of all of my runs is provided in a list.
+In the following section, an overview of all of my runs is provided in a list.
 <iframe src="runs_list.html" width="100%" height="550" style="border:none; margin-bottom: 20px;"></iframe>
 
 <h2>Development over the Years</h2>
