@@ -13,19 +13,15 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Build project
+    - name: List files for debugging
       run: |
-        # Example build steps for a static site generator
-        # Adjust these commands to match your project's build process
-        npm install
-        npm run build
-        # Ensure the build output is in the 'build' directory
-        ls -al ./build  # List files in the build directory for debugging
+        ls -al  # List files in the root directory for debugging
+        ls -al ./build  # List files in the build directory for debugging, if applicable
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        publish_dir: ./build  # Change to your build output directory
-        external_repository: nicosrp/strava-public  # Adjust to your public repo
-        publish_branch: main  # Branch of your public repository
+        publish_dir: ./  # Root directory of your repository if static HTML files are in the root
+        external_repository: nicosrp/strava-public
+        publish_branch: main
