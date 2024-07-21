@@ -6,22 +6,35 @@ on:
       - main  # Adjust if your default branch is different
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v2
 
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 2.7  # Adjust to your required Ruby version
+
+    - name: Install dependencies
+      run: |
+        gem install bundler
+        bundle install
+
+    - name: Build Jekyll site
+      run: bundle exec jekyll build -d _site  # Jekyll outputs to _site by default
+
     - name: List files for debugging
       run: |
         ls -al  # List files in the root directory for debugging
-        ls -al ./build  # List files in the build directory for debugging, if applicable
+        ls -al ./_site  # List files in the Jekyll build directory
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
         personal_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        publish_dir: ./  # Root directory of your repository if static HTML files are in the root
+        publish_dir: ./_site  # Jekyll default build directory
         external_repository: nicosrp/strava-public
         publish_branch: main
