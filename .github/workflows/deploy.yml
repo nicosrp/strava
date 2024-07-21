@@ -13,14 +13,13 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v2
 
-    - name: Set up Ruby
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 2.7  # Adjust to your required Ruby version
+    - name: Use system Ruby
+      run: |
+        ruby -v
+        gem install bundler --no-document --verbose
 
     - name: Install dependencies
       run: |
-        gem install bundler --no-document
         bundle install --verbose
 
     - name: Build Jekyll site
