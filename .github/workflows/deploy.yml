@@ -15,11 +15,12 @@ jobs:
 
     - name: Build project
       run: |
-        # Add your build commands here
-        # For example, if using Jekyll:
-        # bundle install
-        # bundle exec jekyll build -d build
-        # If using plain HTML/CSS/JS, you might not need any build steps
+        # Example build steps for a static site generator
+        # Adjust these commands to match your project's build process
+        npm install
+        npm run build
+        # Ensure the build output is in the 'build' directory
+        ls -al ./build  # List files in the build directory for debugging
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
