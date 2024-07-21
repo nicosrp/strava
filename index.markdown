@@ -22,7 +22,7 @@ This is the distribution of runs across all cities in which I did a run.
 
 <h2>List of All Runs</h2>
 In the following, an overview of all of my runs is provided in a list.
-<iframe src="run_list.html" width="100%" height="550" style="border:none;"></iframe>
+<iframe src="runs_list.html" width="100%" height="550" style="border:none;"></iframe>
 
 <h2>Development over the Years</h2>
 
