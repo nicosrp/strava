@@ -12,7 +12,7 @@ layout: home
 <h2>Spatial Distribution Map</h2>
 This distribution map shows on which routes I have already been running around the world.
 <h3>Zoomed into Copenhagen</h3>
-<iframe src="map_local.html" width="100%" height="550" style="border:none; margin-bottom: 20px;"></iframe>
+<iframe src="activity_map.html" width="100%" height="550" style="border:none; margin-bottom: 20px;"></iframe>
 
 <h2>List of All Runs</h2>
 In the following section, an overview of all of my runs is provided in a list.
