@@ -7,9 +7,11 @@ layout: home
 
 <h1>My Strava Activities</h1>
 
-<iframe src="statistics.html" width="100%" height="325" style="border:none; margin-bottom: 20px;"></iframe>
+<h2>General Stats</h2>
+<iframe src="statistics.html" width="100%" height="325" style="border:none; margin-bottom: 30px;"></iframe>
 
-<iframe src="city_run_stats.html" width="100%" height="325" style="border:none; margin-bottom: 20px;"></iframe>
+<h2>Location Stats</h2>
+<iframe src="city_run_stats.html" width="100%" height="400" style="border:none; margin-bottom: 20px;"></iframe>
 
 <h2>Spatial Distribution Map</h2>
 This distribution map shows on which routes I have already been running around the world.
